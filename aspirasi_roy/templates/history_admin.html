@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History Admin</title>
+</head>
+<body>
+
+<h2>History Semua Aspirasi</h2>
+
+<a href="{{ url_for('admin') }}">Kembali</a>
+<hr>
+
+{% for a in data %}
+    <div style="margin-bottom:20px; border:1px solid #ccc; padding:10px;">
+        <p><b>Nama:</b> {{ a.nama }}</p>
+        <p><b>Akun:</b> {{ a.akun }}</p>
+        <p><b>Tanggal:</b> {{ a.tanggal }}</p>
+        <p><b>Status:</b> {{ a.status }}</p>
+    </div>
+{% endfor %}
+
+</body>
+</html>

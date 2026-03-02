@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Aspirasi Terkirim</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+
+        .top-menu {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .top-menu a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            border-radius: 8px;
+            margin: 5px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 16px;
+            padding: 18px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            display: flex;
+            gap: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card img {
+            width: 150px;
+            height: 120px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .content p {
+            margin: 6px 0;
+            color: #444;
+            font-size: 14px;
+        }
+
+        .label {
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+
+        .status-menunggu {
+            color: #f59e0b;
+            font-weight: 600;
+        }
+
+        .status-diterima {
+            color: #16a34a;
+            font-weight: 600;
+        }
+
+        .feedback-box {
+            background: #eef2ff;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 8px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .empty {
+            text-align: center;
+            color: #888;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Aspirasi Saya</h2>
+
+<div class="top-menu">
+    <a href="{{ url_for('dashboard') }}">Kirim Aspirasi</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</div>
+
+{% if data %}
+{% for a in data %}
+<div class="card">
+    <img src="{{ url_for('static', filename='uploads/' + a.gambar) }}">
+
+    <div class="content">
+        <p><span class="label">Nama:</span> {{ a.nama }}</p>
+        <p><span class="label">Tanggal:</span> {{ a.tanggal }}</p>
+        <p><span class="label">Deskripsi:</span> {{ a.deskripsi }}</p>
+
+        <p>
+            <span class="label">Status:</span>
+            {% if a.status == "Diterima" %}
+                <span class="status-diterima">{{ a.status }}</span>
+            {% else %}
+                <span class="status-menunggu">{{ a.status }}</span>
+            {% endif %}
+        </p>
+
+        {% if a.bukti %}
+            <p><span class="label">Bukti:</span></p>
+            <img src="{{ url_for('static', filename='uploads/' + a.bukti) }}" width="120">
+        {% endif %}
+
+        <!-- 🔥 FEEDBACK ADMIN TAMPIL -->
+        {% if a.feedback %}
+        <div class="feedback-box">
+            <p><span class="label">Feedback Admin:</span></p>
+            <p>{{ a.feedback }}</p>
+        </div>
+        {% endif %} 
+
+        <a href="{{ url_for('history_user') }}"></a>
+
+    </div>
+</div>
+{% endfor %}
+{% else %}
+<p class="empty">Belum ada aspirasi yang dikirim.</p>
+{% endif %}
+
+</body>
+</html>

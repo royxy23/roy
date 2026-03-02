@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Aspirasi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            width: 350px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #4facfe;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4facfe;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #00c6ff;
+        }
+
+        .label {
+            font-size: 13px;
+            color: #555;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .secondary-btn {
+            background: #28a745;
+        }
+
+        .secondary-btn:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Form Aspirasi</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            <label class="label">Nama</label>
+            <input type="text" name="nama" placeholder="Masukkan nama" required>
+
+            <label class="label">Akun</label>
+            <input type="text" name="akun" placeholder="Masukkan akun" required>
+
+            <label class="label">Gambar</label>
+            <input type="file" name="gambar" required>
+
+            <label class="label">Deskripsi</label>
+            <textarea name="deskripsi" placeholder="Tulis aspirasi kamu..." required></textarea>
+
+            <button type="submit">Kirim Aspirasi</button>
+        </form>
+
+        <a href="/terkirim">
+            <button type="button" class="secondary-btn">
+                Lihat Aspirasi Terkirim
+            </button>
+        </a>
+
+        <a href="/logout">
+            <button type="button" style="background:#dc3545;">
+                Logout
+            </button>
+        </a>
+    </div>
+
+</body>
+</html>

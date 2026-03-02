@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History User</title>
+</head>
+<body>
+
+<h2>History Aspirasi Saya</h2>
+
+<a href="{{ url_for('aspirasi_terkirim') }}">Kembali</a>
+<hr>
+
+{% for a in data %}
+    <div style="margin-bottom:20px; border:1px solid #ccc; padding:10px;">
+        <p><b>Tanggal:</b> {{ a.tanggal }}</p>
+        <p><b>Deskripsi:</b> {{ a.deskripsi }}</p>
+        <p><b>Status:</b> {{ a.status }}</p>
+
+        {% if a.bukti %}
+            <p><b>Bukti:</b></p>
+            <img src="{{ url_for('static', filename='uploads/' + a.bukti) }}" width="120">
+        {% endif %}
+
+        {% if a.feedback %}
+            <p><b>Feedback:</b> {{ a.feedback }}</p>
+        {% endif %}
+    </div>
+{% endfor %}
+
+</body>
+</html>
