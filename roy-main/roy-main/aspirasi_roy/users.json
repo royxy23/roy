@@ -1,0 +1,18 @@
+{
+    "admin": [
+        {
+            "username": "sahrul",
+            "password": "123"
+        }
+    ],
+    "user": [
+        {
+            "username": "sahrul",
+            "password": "123"
+        },
+        {
+            "username": "pakmundir",
+            "password": "123"
+        }
+    ]
+}

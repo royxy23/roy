@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "nama": "dewa",
+        "akun": "sahrul",
+        "gambar": "mobil_mulus.png",
+        "deskripsi": "rapikan",
+        "status": "Diterima",
+        "bukti": "mobil_kotor.png",
+        "tanggal": "05-02-2026 08:53",
+        "feedback": "sudah",
+        "history": true
+    },
+    {
+        "id": 2,
+        "nama": "sahrul",
+        "akun": "sahrul",
+        "gambar": "rumah_hancur.png",
+        "deskripsi": "benerno",
+        "status": "Diterima",
+        "bukti": "rumah_hancur.png",
+        "tanggal": "05-02-2026 08:53",
+        "feedback": "sudah\r\n",
+        "history": true
+    },
+    {
+        "id": 3,
+        "nama": "hafis",
+        "akun": "sahrul",
+        "gambar": "rusak.png",
+        "deskripsi": "benerkan",
+        "status": "Diterima",
+        "bukti": "mulus.png",
+        "tanggal": "03-03-2026 09:18",
+        "feedback": "sudah",
+        "history": true
+    },
+    {
+        "id": 4,
+        "nama": "bagus",
+        "akun": "sahrul",
+        "gambar": "Screenshot_2026-03-03_092414.png",
+        "deskripsi": "sepeda rusak tolong rapikan",
+        "status": "Diterima",
+        "bukti": "Screenshot_2026-03-03_092445.png",
+        "tanggal": "03-03-2026 09:25",
+        "feedback": "sudah selesai",
+        "history": true
+    },
+    {
+        "id": 5,
+        "nama": "danil",
+        "akun": "sahrul",
+        "gambar": "Screenshot_2026-03-03_091914.png",
+        "deskripsi": "rusak pc tolong bnerkan",
+        "status": "Diterima",
+        "bukti": "",
+        "tanggal": "03-03-2026 09:26",
+        "feedback": "sudah seleai tinggal hidupin ada",
+        "history": true
+    },
+    {
+        "id": 6,
+        "nama": "wildan",
+        "akun": "sahrul",
+        "gambar": "Screenshot_2026-03-03_092305.png",
+        "deskripsi": "jembatan nya rusak tolong jadi kan jembatan suramadu",
+        "status": "Diterima",
+        "bukti": "Screenshot_2026-03-03_092331.png",
+        "tanggal": "03-03-2026 09:27",
+        "feedback": "sudah selesai",
+        "history": true
+    },
+    {
+        "id": 7,
+        "nama": "pakmundir",
+        "akun": "sahrul",
+        "gambar": "rumah_hancur.png",
+        "deskripsi": "bangunkan ",
+        "status": "Diterima",
+        "bukti": "rumah_mwah.png",
+        "tanggal": "03-03-2026 09:49",
+        "feedback": "sudah selesai",
+        "history": true
+    }
+]
